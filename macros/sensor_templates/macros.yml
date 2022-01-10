@@ -1,0 +1,22 @@
+version: 2
+
+macros:
+  - name: canary_sensor
+    description: '{{ doc("canary_sensor") }}'
+  - name: column_value_sensor
+    description: '{{ doc("column_value_sensor") }}'
+  - name: columns_value_sensor
+    description: '{{ doc("columns_value_sensor") }}'
+  - name: get_columns_by_type
+    description: '{{ doc("get_columns_by_type") }}'
+  - name: search_sample_columns_samples_for_pattern
+    description: '{{ doc("search_sample_columns_samples_for_pattern") }}'
+  - name: postgres__find_columns_with_names_like
+    description: '{{ doc("find_columns_with_names_like") }}'
+  - name: postgres__get_columns_by_type
+    description: '{{ doc("get_columns_by_type") }}'
+  - name: postgres__search_sample_of_column_for_pattern
+    description: '{{ doc("search_sample_of_column_for_pattern") }}'
+  - name: postgres__search_sample_of_columns_for_pattern
+    description: '{{ doc("search_sample_of_columns_for_pattern") }}'
+

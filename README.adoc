@@ -1,0 +1,23 @@
+= Siren
+
+== Description
+
+dbt project, consisting mostly of useful functions, for detecting sensitive data based on a configurable set of rules. 
+
+== Sensors 
+
+A sensor is a dbt model whose primary purpose is to detect sensitive data within the database. In DataSiren, a sensor is intended to have the following columns and types (at least in postgres) in order:
+
+[source,sql]
+----
+    sensor_name VARCHAR,
+    table_catalog VARCHAR,
+    table_schema VARCHAR,
+    column_name VARCHAR,
+    other_identifier VARIANT,
+    time_detected TIMESTAMP,
+----
+
+== Use 
+
+Included are many possibly useful macros that can be used to define sensors. To use the project, simply include the package in the packages.yml file. Then, to take advantage of the datasiren_audit_results table, specify `datasiren::schema_name` variable value. The value of this variable shold be the name of the schema that has the sensors that should be unioned together to form the audit results. Relations in this schema beginning with `datasiren_` will be included.

@@ -1,0 +1,5 @@
+version: 2
+
+models:
+  - name: datasiren_audit_results
+    description: '{{ doc("datasiren_audit_results") }}'
