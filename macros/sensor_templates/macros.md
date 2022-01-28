@@ -1,7 +1,11 @@
 {% docs canary_sensor %}
+
 Useful to determine when datasiren runs.  Will return exactly a single row as long as the specified database exists and has at least one column.
+
 {% enddocs %}
+
 {% docs column_value_sensor %}
+
 A sensor template that scans a designated column for a given regular expression.
 Parameters:
 
@@ -13,12 +17,15 @@ table_ref: A dbt model reference or the fully qualified table name, ie db_name.s
 sample_rule: A number that specifies what percentage of the tables rows should be scanned.  Can also be used to designate the absolute number of rows that should be scanned by suffixing with ROWS, ie 10 ROWS.  For Postgres, follows the specifications of the sample function.
 
 {% enddocs %}
+
 {% docs columns_value_sensor %}
 A sensor that supports scanning data from multiple columns in the same table at the same time.
 {% enddocs %}
+
 {% docs get_columns_by_type %}
 Returns a query to retrieve a sample of columns of a specified type in the specified database.
 {% enddocs %}
+
 {% docs search_sample_columns_samples_for_pattern %}
 Scans samples of the values in a sample of all columns of a particular type in the specified database for the specified regular expression.
 Parameters:
@@ -35,9 +42,11 @@ column_pattern: Regular expression defining what sensitive data is being searche
 Uses the information schema of the specified database to find columns with names matching the specified pattern.
 Uses the LIKE function.
 {% enddocs %}
+
 {% docs search_sample_of_column_for_pattern %}
 A query that scans a sample of rows from the given model in search of where the specified column matches the specified regular expression.
 {% enddocs %}
+
 {% docs search_sample_of_columns_for_pattern %}
 A query that scans a sample of rows from the given model in search of where one or more of the specified columns matches the specified regular expression.
 {% enddocs %}

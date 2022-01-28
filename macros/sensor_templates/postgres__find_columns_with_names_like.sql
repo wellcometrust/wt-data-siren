@@ -1,4 +1,4 @@
-{% macro snowflake__find_columns_with_names_like(sensor_name, column_pattern_matching, database_to_scan) %}
+{% macro postgres__find_columns_with_names_like(sensor_name, column_pattern_matching, database_to_scan) %}
 
     SELECT 
       '{{ sensor_name }}' AS sensor_name,

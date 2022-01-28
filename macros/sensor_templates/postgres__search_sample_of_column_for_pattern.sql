@@ -1,4 +1,4 @@
-{% macro snowflake__search_sample_of_column_for_pattern(sensor_name, column_name, column_pattern, other_identifier, table_ref, sample_rule) %}
+{% macro postgres__search_sample_of_column_for_pattern(sensor_name, column_name, column_pattern, other_identifier, table_ref, sample_rule) %}
 
     SELECT 
       '{{ sensor_name }}'                 AS sensor_name,

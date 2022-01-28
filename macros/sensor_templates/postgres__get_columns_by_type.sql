@@ -1,4 +1,4 @@
-{% macro snowflake__get_columns_by_type(database_to_scan, column_type, sample_rule, schema_name = None) %}
+{% macro postgres__get_columns_by_type(database_to_scan, column_type, sample_rule, schema_name = None) %}
 
     SELECT 
       table_schema        AS table_schema,
