@@ -4,7 +4,7 @@
     })
 }}
 
-{% for sensor in dbt_utils.get_relations_by_prefix(var('datasiren::schema_name'), 'datasiren_', exclude='datairen_audit_results', database=this.database) %}
+{% for sensor in dbt_utils.get_relations_by_prefix(var('datasiren:schema_name'), 'datasiren_', exclude='datairen_audit_results', database=this.database) %}
 
     SELECT * 
     FROM {{ sensor }}
