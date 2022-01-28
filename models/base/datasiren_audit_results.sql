@@ -1,7 +1,7 @@
-{{ config({
-    "materialized": "incremental",
-    "full_refresh": "false",
-    })
+{{ config(
+        materialized='incremental',
+        full_refresh="false"
+    )
 }}
 
 {% for sensor in dbt_utils.get_relations_by_prefix(var('datasiren:schema_name'), 'datasiren_', exclude='datairen_audit_results', database=this.database) %}
