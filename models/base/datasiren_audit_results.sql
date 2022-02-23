@@ -11,7 +11,7 @@
     {% if is_incremental() %}
         WHERE time_detected > 
           (
-            SELECT IFNULL(MAX(time_detected),'1900-01-01 00:00:00.000 +0000') 
+            SELECT NULLIF(MAX(time_detected),'1900-01-01 00:00:00.000 +0000') 
             FROM {{ this }} 
             WHERE sensor_name in (
               SELECT DISTINCT sensor_name 
