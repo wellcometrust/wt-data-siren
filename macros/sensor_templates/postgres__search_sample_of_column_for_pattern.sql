@@ -13,8 +13,8 @@
       {% endif %}
       '{{ column_name }}'                 AS column_name,
       {{ other_identifier }}              AS other_identifier,
-      CURRENT_TIMESTAMP()                 AS time_detected
-    FROM {{ table_ref }} sample ({{sample_rule}})
+      CURRENT_TIMESTAMP                   AS time_detected
+    FROM {{ table_ref }} TABLESAMPLE BERNOULLI ({{sample_rule}})
     WHERE REGEXP_LIKE("{{column_name}}", '{{ column_pattern }}')
 
 {%- endmacro -%}

@@ -17,7 +17,7 @@
       {% endfor %}
         ELSE NULL END AS column_name,
       {{ other_identifier }}              AS other_identifier,
-      CURRENT_TIMESTAMP()                 AS time_detected
+      CURRENT_TIMESTAMP                   AS time_detected
     FROM {{ table_ref }} TABLESAMPLE BERNOULLI ({{sample_rule}})
     WHERE column_name IS NOT NULL
 
