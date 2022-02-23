@@ -6,8 +6,8 @@
       table_schema        AS table_schema,
       table_name          AS table_name,
       column_name         AS column_name,
-      NULL::VARIANT       AS other_identifier,
-      CURRENT_TIMESTAMP() AS time_detected
+      NULL::JSONB         AS other_identifier,
+      NOW()               AS time_detected
     FROM "{{ database_to_scan|upper }}".information_schema.columns
     WHERE LOWER(column_name) LIKE LOWER('{{column_pattern_matching}}')
 
