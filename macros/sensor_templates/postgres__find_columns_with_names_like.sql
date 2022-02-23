@@ -8,7 +8,7 @@
       column_name         AS column_name,
       NULL::JSONB         AS other_identifier,
       CURRENT_TIMESTAMP   AS time_detected
-    FROM "{{ database_to_scane }}".datasiren.datasiren_table_columns
+    FROM "{{ database_to_scan }}".datasiren.datasiren_table_columns
     WHERE LOWER(column_name) LIKE LOWER('{{column_pattern_matching}}')
 
 {%- endmacro -%}
